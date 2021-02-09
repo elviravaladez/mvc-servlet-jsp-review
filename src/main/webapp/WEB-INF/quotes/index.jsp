@@ -28,7 +28,12 @@
     <c:forEach var="quote" items="${quotes}">
         <div class="col-md-6">
             <h2>${quote.quote}</h2>
-            <p>Author: ${quote.author}</p>
+            <p>Quote: ${quote.author}</p>
+            <p>Stars: ${quote.stars}</p>
+            <form action="/stars" method="POST">
+                <input type="hidden" name="quote-id" value="${quote.id}"> <%--You won't see this on the page b/c the type is hidden--%>
+                <button type="submit" class="btn btn-warning" id="quote-${quote.id}">Give Stars</button>
+            </form>
         </div>
     </c:forEach>
 </div>

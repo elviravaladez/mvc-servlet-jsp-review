@@ -33,4 +33,10 @@ public class QuotesIndexServlet extends HttpServlet {
         request.getRequestDispatcher("/WEB-INF/quotes/index.jsp").forward(request, response);
 
     }
+
+    protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        int clicked = 0;
+        clicked++;
+        System.out.println(clicked);
+    }
 }
